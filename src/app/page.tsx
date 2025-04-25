@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import HomePic from "@/assets/homePic.svg"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, ArrowRight } from "lucide-react"
 
@@ -12,7 +13,7 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
+            <Image src="./assets/homePic.svg" alt="Logo" width={32} height={32} />
             <span className="text-xl font-bold">EduConnect</span>
           </div>
 
@@ -42,7 +43,7 @@ export default function LandingPage() {
       <main>
         {/* Hero Section */}
         <section id="home" className="relative flex min-h-[80vh] items-center justify-center">
-          <Image src="/placeholder.svg?height=1080&width=1920" alt="Students" fill className="object-cover" priority />
+          <Image src={HomePic} alt="Students" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="relative z-10 mx-auto max-w-3xl text-center">
             <h1 className="animate-text-shine bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-6xl">
