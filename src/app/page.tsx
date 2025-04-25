@@ -1,103 +1,282 @@
-import Image from "next/image";
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, ArrowRight } from "lucide-react"
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex min-h-screen flex-col">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4">
+          <div className="flex items-center gap-2">
+            <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
+            <span className="text-xl font-bold">EduConnect</span>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <nav className="hidden space-x-8 md:flex">
+            <Link href="#home" className="text-sm font-medium transition-colors hover:text-primary">
+              Home
+            </Link>
+            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
+              About
+            </Link>
+            <Link href="#services" className="text-sm font-medium transition-colors hover:text-primary">
+              Services
+            </Link>
+            <Link href="#demo" className="text-sm font-medium transition-colors hover:text-primary">
+              Demo
+            </Link>
+          </nav>
+
+          <div>
+            <Button asChild variant="outline">
+              <Link href="/login">Sign In</Link>
+            </Button>
+          </div>
         </div>
+      </header>
+
+      <main>
+        {/* Hero Section */}
+        <section id="home" className="relative flex min-h-[80vh] items-center justify-center">
+          <Image src="/placeholder.svg?height=1080&width=1920" alt="Students" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="relative z-10 mx-auto max-w-3xl text-center">
+            <h1 className="animate-text-shine bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-6xl">
+              Parent-Student Communication Portal
+            </h1>
+            <p className="mt-4 text-lg text-white/80">Bridging the gap between parents, students, and educators</p>
+            <Button size="lg" className="mt-8">
+              Let&apos;s communicate
+            </Button>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-12 md:grid-cols-2">
+              <div className="relative h-[400px] overflow-hidden rounded-lg">
+                <Image src="/placeholder.svg?height=800&width=600" alt="About us" fill className="object-cover" />
+              </div>
+              <div className="flex flex-col justify-center">
+                <h2 className="text-3xl font-bold tracking-tight">About Our Platform</h2>
+                <div className="mt-4 space-y-4 text-muted-foreground">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
+                    vestibulum. Cras porttitor metus in enim tincidunt, vel faucibus mi pulvinar. Nulla facilisi.
+                  </p>
+                  <p>
+                    Praesent venenatis, nunc in bibendum fringilla, quam risus feugiat turpis, nec blandit eros dui eget
+                    nisi. Maecenas non mauris sapien. Fusce non eros et ex scelerisque imperdiet ac quis risus.
+                  </p>
+                  <p>
+                    Etiam suscipit, nisi id posuere dapibus, nisl ipsum ultrices ex, at feugiat orci neque eu urna. Sed
+                    lobortis imperdiet sem, vel tempus turpis porttitor at.
+                  </p>
+                </div>
+                <Button variant="outline" className="mt-6 w-fit">
+                  Learn more
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="bg-muted py-20">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight">Our Services</h2>
+              <p className="mt-4 text-muted-foreground">
+                Everything you need to keep in touch with your student&apos;s progress
+              </p>
+            </div>
+
+            <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  title: "Real-time Communication",
+                  description: "Direct messaging between parents and teachers for timely updates.",
+                  icon: "💬",
+                },
+                {
+                  title: "Grade Tracking",
+                  description: "Monitor academic performance with easy-to-read visualizations.",
+                  icon: "📊",
+                },
+                {
+                  title: "Attendance Monitoring",
+                  description: "Stay informed about your child's attendance and punctuality.",
+                  icon: "📅",
+                },
+                {
+                  title: "Homework Tracking",
+                  description: "Never miss an assignment with our comprehensive homework system.",
+                  icon: "📝",
+                },
+                {
+                  title: "Event Calendar",
+                  description: "Keep up with school events, meetings, and important dates.",
+                  icon: "🗓️",
+                },
+                {
+                  title: "Progress Reports",
+                  description: "Detailed insights into your child's academic and personal development.",
+                  icon: "📈",
+                },
+              ].map((service, index) => (
+                <Card key={index} className="service-card overflow-hidden">
+                  <CardHeader>
+                    <div className="text-4xl">{service.icon}</div>
+                    <CardTitle className="mt-4">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>{service.description}</CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="ghost" className="mt-2 w-full justify-between">
+                      Learn more <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Video Demo Section */}
+        <section id="demo" className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight">See It In Action</h2>
+              <p className="mt-4 text-muted-foreground">
+                Watch how our platform makes parent-student-teacher communication seamless
+              </p>
+            </div>
+
+            <div className="mt-12 aspect-video w-full overflow-hidden rounded-lg bg-muted/50">
+              <div className="flex h-full items-center justify-center">
+                <Button size="lg" variant="outline">
+                  <div className="mr-2 h-6 w-6 rounded-full bg-primary" />
+                  Play Demo Video
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-16 text-gray-300">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
+            {/* Column 1: Logo & Contact Form */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center gap-2">
+                <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
+                <span className="text-xl font-bold text-white">EduConnect</span>
+              </div>
+              <p className="mt-4 text-sm">Subscribe to our newsletter</p>
+              <div className="mt-2 flex">
+                <Input type="email" placeholder="Your email" className="rounded-r-none bg-gray-800 text-white" />
+                <Button size="sm" className="rounded-l-none">
+                  Submit
+                </Button>
+              </div>
+            </div>
+
+            {/* Column 2: Support */}
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">Support</h3>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  <span>support@educonnect.com</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  <span>+1 (555) 123-4567</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3: Account */}
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">Account</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="#" className="transition-colors hover:text-white">
+                    My Account
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="transition-colors hover:text-white">
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="transition-colors hover:text-white">
+                    Register
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4: Quick Links */}
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="#" className="transition-colors hover:text-white">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="transition-colors hover:text-white">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="transition-colors hover:text-white">
+                    Help Center
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 5: Social Media */}
+            <div>
+              <h3 className="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
+              <div className="flex space-x-4">
+                <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-primary/80">
+                  <Facebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
+                </Link>
+                <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-primary/80">
+                  <Twitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
+                </Link>
+                <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-primary/80">
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </Link>
+                <Link href="#" className="rounded-full bg-gray-800 p-2 transition-colors hover:bg-primary/80">
+                  <Youtube className="h-5 w-5" />
+                  <span className="sr-only">YouTube</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm">
+            <p>&copy; {new Date().getFullYear()} EduConnect. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
