@@ -4,6 +4,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import HomePic from "@/assets/homePic.svg"
+import StudentsPic from "@/assets/students.svg"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, ArrowRight } from "lucide-react"
 
@@ -14,7 +16,7 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
+            <Image src="/Logo.png" alt="Logo" width={32} height={32} />
             <span className="text-xl font-bold">EduConnect</span>
           </div>
 
@@ -43,9 +45,9 @@ export default function LandingPage() {
 
       <main className="w-full">
         {/* Hero Section */}
-        <section id="home" className="relative flex min-h-[80vh] w-full items-center justify-center">
-          <Image src="/placeholder.svg?height=1080&width=1920" alt="Students" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-black/60"></div>
+        <section id="home" className="relative flex min-h-[80vh] w-full items-center justify-center h-full">
+          <Image src={HomePic} alt="Students" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-black/80"></div>
           <div className="relative z-10 mx-auto max-w-3xl text-center">
             <h1 className="animate-gradient-text bg-gradient-to-r from-blue-500 via-white to-pink-500 bg-[length:200%_auto] bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-6xl">
               Parent-Student Communication Portal
@@ -62,7 +64,7 @@ export default function LandingPage() {
           <div className="mx-auto w-full max-w-screen-2xl px-4 md:px-6">
             <div className="grid gap-12 md:grid-cols-2">
               <div className="relative h-[400px] overflow-hidden rounded-lg">
-                <Image src="/placeholder.svg?height=800&width=600" alt="About us" fill className="object-cover" />
+                <Image src={StudentsPic} alt="About us" fill className="object-fill" />
               </div>
               <div className="flex flex-col justify-center">
                 <h2 className="text-3xl font-bold tracking-tight">About Our Platform</h2>
