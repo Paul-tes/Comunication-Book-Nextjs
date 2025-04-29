@@ -14,18 +14,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 const parents = [
   {
     id: 1,
-    name: "John Doe",
-    studentName: "Emma Johnson",
-    avatar: "/placeholder.svg?height=40&width=40",
+    name: "Teferi Mekonen",
+    studentName: "Biruk Biserat",
+    avatar: "/placeholderparent.jpg",
     lastMessage: "Thank you for the update on Emma's progress.",
     lastMessageTime: "2 hours ago",
     unread: true,
   },
   {
     id: 2,
-    name: "Sarah Smith",
+    name: "Sarah Gebeyehu",
     studentName: "Noah Smith",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholderparent.jpg",
     lastMessage: "When is the next parent-teacher meeting?",
     lastMessageTime: "Yesterday",
     unread: false,
@@ -34,7 +34,7 @@ const parents = [
     id: 3,
     name: "Michael Davis",
     studentName: "Olivia Davis",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholderparent.jpg",
     lastMessage: "Olivia will be absent tomorrow due to a doctor's appointment.",
     lastMessageTime: "3 days ago",
     unread: false,
@@ -47,7 +47,7 @@ const students = [
     id: 1,
     name: "Emma Johnson",
     grade: "Grade 5",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholderparent.jpg",
     lastMessage: "I have a question about the homework.",
     lastMessageTime: "1 day ago",
     unread: true,
@@ -56,7 +56,7 @@ const students = [
     id: 2,
     name: "Noah Smith",
     grade: "Grade 5",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholderparent.jpg",
     lastMessage: "I've submitted my assignment.",
     lastMessageTime: "3 days ago",
     unread: false,
@@ -68,7 +68,7 @@ const conversations = {
   "parent-1": [
     {
       id: 1,
-      sender: "John Doe",
+      sender: "Teferi Mekonen",
       content: "Hello Ms. Smith, how is Emma doing in class?",
       timestamp: "3 days ago",
     },
@@ -81,7 +81,7 @@ const conversations = {
     },
     {
       id: 3,
-      sender: "John Doe",
+      sender: "Teferi Mekonen",
       content: "That's great to hear! We've been practicing math at home.",
       timestamp: "2 days ago",
     },
@@ -93,7 +93,7 @@ const conversations = {
     },
     {
       id: 5,
-      sender: "John Doe",
+      sender: "Teferi Mekonen",
       content: "Thank you for the update on Emma's progress.",
       timestamp: "2 hours ago",
     },
@@ -101,7 +101,7 @@ const conversations = {
   "student-1": [
     {
       id: 1,
-      sender: "Emma Johnson",
+      sender: "Sarah Gebeyehu",
       content: "Hello Ms. Smith, I have a question about the homework.",
       timestamp: "1 day ago",
     },
@@ -113,7 +113,7 @@ const conversations = {
     },
     {
       id: 3,
-      sender: "Emma Johnson",
+      sender: "Sarah Gebeyehu",
       content: "For problem #5, do we need to show all the steps or just the answer?",
       timestamp: "1 day ago",
     },

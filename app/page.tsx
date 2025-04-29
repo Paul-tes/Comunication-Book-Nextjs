@@ -13,24 +13,24 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-md border-gray-200 shadow-md">
         <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
             <Image src="/Logo.png" alt="Logo" width={32} height={32} />
-            <span className="text-xl font-bold">EduConnect</span>
+            <span className="text-xl font-bold">Sky Acadamy</span>
           </div>
 
           <nav className="hidden space-x-8 md:flex">
-            <Link href="#home" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#home" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
               Home
             </Link>
-            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
               About
             </Link>
-            <Link href="#services" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#services" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
               Services
             </Link>
-            <Link href="#demo" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#demo" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
               Demo
             </Link>
           </nav>
@@ -45,15 +45,15 @@ export default function LandingPage() {
 
       <main className="w-full">
         {/* Hero Section */}
-        <section id="home" className="relative flex min-h-[80vh] w-full items-center justify-center h-full">
+        <section id="home" className="relative flex min-h-[80vh] w-full items-center justify-center h-screen">
           <Image src={HomePic} alt="Students" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/80"></div>
           <div className="relative z-10 mx-auto max-w-3xl text-center">
             <h1 className="animate-gradient-text bg-gradient-to-r from-blue-500 via-white to-pink-500 bg-[length:200%_auto] bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-6xl">
-              Parent-Student Communication Portal
+              Parent-Teachers Communication Portal
             </h1>
             <p className="mt-4 text-lg text-white/80">Bridging the gap between parents, students, and educators</p>
-            <Button size="lg" className="mt-8">
+            <Button size="lg" className="mt-8 bg-slate-950 hover:bg-slate-900">
               Let&apos;s communicate
             </Button>
           </div>
@@ -193,7 +193,7 @@ export default function LandingPage() {
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2">
                 <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
-                <span className="text-xl font-bold text-white">EduConnect</span>
+                <span className="text-xl font-bold text-white">Sky Acadamy</span>
               </div>
               <p className="mt-4 text-sm">Subscribe to our newsletter</p>
               <div className="mt-2 flex">
@@ -210,7 +210,7 @@ export default function LandingPage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>support@educonnect.com</span>
+                  <span>support@skyacadamy.com</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
@@ -288,7 +288,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} EduConnect. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Sky Acadamy. All rights reserved.</p>
           </div>
         </div>
       </footer>

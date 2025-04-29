@@ -13,27 +13,27 @@ import { Separator } from "@/components/ui/separator"
 const teachers = [
   {
     id: 1,
-    name: "Ms. Smith",
+    name: "Ms. Nathan",
     subject: "Mathematics",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder-user_n.jpg",
     lastMessage: "Emma did very well on her math test today!",
     lastMessageTime: "2 hours ago",
     unread: true,
   },
   {
     id: 2,
-    name: "Mr. Johnson",
+    name: "Mr. Boni",
     subject: "Science",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder-user_b.jpg",
     lastMessage: "We'll be having a science fair next month.",
     lastMessageTime: "Yesterday",
     unread: false,
   },
   {
     id: 3,
-    name: "Mrs. Davis",
+    name: "Mrs. Pawlos",
     subject: "English",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder-user_p.jpg",
     lastMessage: "Please remind Emma to bring her book tomorrow.",
     lastMessageTime: "3 days ago",
     unread: false,
@@ -45,7 +45,7 @@ const conversations = {
   1: [
     {
       id: 1,
-      sender: "Ms. Smith",
+      sender: "Ms. Nathan",
       content: "Hello! I wanted to let you know that Emma did very well on her math test today!",
       timestamp: "2 days ago",
     },
@@ -57,7 +57,7 @@ const conversations = {
     },
     {
       id: 3,
-      sender: "Ms. Smith",
+      sender: "Ms. Nathan",
       content: "It definitely shows. She's making excellent progress with fractions.",
       timestamp: "2 days ago",
     },
@@ -69,7 +69,7 @@ const conversations = {
     },
     {
       id: 5,
-      sender: "Ms. Smith",
+      sender: "Ms. Nathan",
       content: "We'll be starting decimals next week, so any preparation on that would be helpful.",
       timestamp: "2 hours ago",
     },
@@ -77,7 +77,7 @@ const conversations = {
   2: [
     {
       id: 1,
-      sender: "Mr. Johnson",
+      sender: "Mr. Boni",
       content: "We'll be having a science fair next month. Students will need to prepare a project.",
       timestamp: "Yesterday",
     },
@@ -85,7 +85,7 @@ const conversations = {
   3: [
     {
       id: 1,
-      sender: "Mrs. Davis",
+      sender: "Mrs. Pawlos",
       content: "Please remind Emma to bring her book tomorrow for our reading session.",
       timestamp: "3 days ago",
     },

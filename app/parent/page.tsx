@@ -11,11 +11,11 @@ import { BookOpen, Calendar, CheckCircle, Clock, GraduationCap } from "lucide-re
 const children = [
   {
     id: 1,
-    name: "Emma Johnson",
+    name: "Kidest Getenet",
     grade: "Grade 5",
     performance: "Excellent",
     performanceColor: "bg-green-100 text-green-800",
-    avatar: "/placeholder.svg?height=80&width=80",
+    avatar: "/studentPlaceholder.jpg",
     attendance: 95,
     homeworkPending: 2,
     recentGrade: "A-",
@@ -24,11 +24,11 @@ const children = [
   },
   {
     id: 2,
-    name: "Noah Johnson",
+    name: "Nahom Desalegn",
     grade: "Grade 3",
     performance: "Needs Attention",
     performanceColor: "bg-amber-100 text-amber-800",
-    avatar: "/placeholder.svg?height=80&width=80",
+    avatar: "/studentPlaceholder2.jpg",
     attendance: 88,
     homeworkPending: 4,
     recentGrade: "B",

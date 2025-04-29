@@ -11,11 +11,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 // Mock data for students
 const students = [
-  { id: 1, name: "Emma Johnson" },
-  { id: 2, name: "Noah Smith" },
-  { id: 3, name: "Olivia Davis" },
-  { id: 4, name: "Liam Wilson" },
-  { id: 5, name: "Ava Brown" },
+  { id: 1, name: "Bereket Tesfaye" },
+  { id: 2, name: "Wildan Yehya" },
+  { id: 3, name: "Mubarek Adib" },
+  { id: 4, name: "Zena G/Kiros" },
+  { id: 5, name: "Dawit Debebe" },
 ]
 
 // Mock data for subjects
