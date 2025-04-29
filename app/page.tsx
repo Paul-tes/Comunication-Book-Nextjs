@@ -13,14 +13,14 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-md border-gray-200 shadow-md">
+      <header className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-gray-900 shadow-md text-white">
         <div className="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
             <Image src="/Logo.png" alt="Logo" width={32} height={32} />
             <span className="text-xl font-bold">Sky Acadamy</span>
           </div>
 
-          <nav className="hidden space-x-8 md:flex">
+          <nav className="hidden space-x-8 md:flex text-white">
             <Link href="#home" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
               Home
             </Link>
@@ -37,7 +37,7 @@ export default function LandingPage() {
 
           <div>
             <Button asChild variant="outline">
-              <Link href="/login">Sign In</Link>
+              <Link href="/login" className="text-black font-bold">Sign In</Link>
             </Button>
           </div>
         </div>
