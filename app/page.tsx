@@ -21,16 +21,16 @@ export default function LandingPage() {
           </div>
 
           <nav className="hidden space-x-8 md:flex text-white">
-            <Link href="#home" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
+            <Link href="#home" className="text-sm font-medium transition-colors relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Home
             </Link>
-            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
+            <Link href="#about" className="text-sm font-medium transition-colors relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               About
             </Link>
-            <Link href="#services" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
+            <Link href="#services" className="text-sm font-medium transition-colors relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Services
             </Link>
-            <Link href="#demo" className="text-sm font-medium transition-colors hover:text-primary hover:font-bold">
+            <Link href="#demo" className="text-sm font-medium transition-colors relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Demo
             </Link>
           </nav>
@@ -192,7 +192,7 @@ export default function LandingPage() {
             {/* Column 1: Logo & Contact Form */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2">
-                <Image src="/placeholder.svg?height=32&width=32" alt="Logo" width={32} height={32} />
+                <Image src="/Logo.png" alt="Logo" width={50} height={50} />
                 <span className="text-xl font-bold text-white">Sky Acadamy</span>
               </div>
               <p className="mt-4 text-sm">Subscribe to our newsletter</p>

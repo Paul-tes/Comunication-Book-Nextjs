@@ -54,15 +54,15 @@ export default function LoginPage() {
         </div>
         <div className="relative z-20 flex items-center text-lg font-medium">
           <Image src="/Logo.png" alt="Logo" width={200} height={200} />
-          <span className="ml-2">EduConnect</span>
+          <span className="ml-2">Sky Academy</span>
         </div>
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
             <p className="text-lg">
-              "EduConnect has revolutionized how we communicate with parents.
-              It's made tracking student progress so much easier."
+              "Skytech Academy has revolutionized how we communicate with parents.
+            It's made tracking student progress so much easier."
             </p>
-            <footer className="text-sm">Ms. Johnson, Math Teacher</footer>
+            <footer className="text-sm">Ms. Nathan, Math Teacher</footer>
           </blockquote>
         </div>
       </div>
