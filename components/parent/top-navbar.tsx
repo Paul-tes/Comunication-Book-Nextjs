@@ -1,8 +1,6 @@
 "use client"
-
-import { useState } from "react"
 import { usePathname } from "next/navigation"
-import { ChevronDown, User, Settings, LogOut } from "lucide-react"
+import { User, Settings, LogOut } from "lucide-react"
 import Link from "next/link"
 
 import {
@@ -15,14 +13,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 
-// Mock data for children
-const children = [
-  { id: 1, name: "Emma Johnson", grade: "Grade 5" },
-  { id: 2, name: "Noah Johnson", grade: "Grade 3" },
-]
-
 export function TopNavbar() {
-  const [selectedChild, setSelectedChild] = useState(children[0])
   const pathname = usePathname()
 
   // Get page title based on pathname
@@ -41,24 +32,6 @@ export function TopNavbar() {
       <div className="flex flex-1 items-center justify-between">
         <h1 className="text-xl font-semibold">{getPageTitle()}</h1>
         <div className="flex items-center gap-4">
-          {children.length > 1 && (
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-2 rounded-md border px-3 py-2 text-sm">
-                <span>{selectedChild.name}</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {children.map((child) => (
-                  <DropdownMenuItem key={child.id} onClick={() => setSelectedChild(child)}>
-                    <div className="flex flex-col">
-                      <span>{child.name}</span>
-                      <span className="text-xs text-muted-foreground">{child.grade}</span>
-                    </div>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          )}
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

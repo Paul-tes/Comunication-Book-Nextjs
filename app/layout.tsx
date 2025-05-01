@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "School Management System",
+  icons: {
+    icon: "/Logo.png",
+  },
   description: "Dashboard for parents, teachers, and administrators",
     generator: 'v0.dev'
 }

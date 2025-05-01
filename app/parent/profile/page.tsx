@@ -61,9 +61,9 @@ type ProfileFormValues = z.infer<typeof profileFormSchema>
 
 // Default values
 const defaultValues: Partial<ProfileFormValues> = {
-  name: "John Doe",
-  email: "john.doe@example.com",
-  phone: "1234567890",
+  name: "Nathan Yirgalem",
+  email: "nathan.yireg@example.com",
+  phone: "+251963254896",
 }
 
 export default function ProfilePage() {
@@ -102,7 +102,7 @@ export default function ProfilePage() {
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="flex justify-center mb-6">
                   <Avatar className="h-24 w-24">
-                    <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Profile" />
+                    <AvatarImage src="/placeholder-user_n.jpg" alt="Profile" />
                     <AvatarFallback>JD</AvatarFallback>
                   </Avatar>
                 </div>
